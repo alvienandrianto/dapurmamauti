@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dapur Mama Uti - Manisnya Tradisi, Segarnya Inovasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-poppins text-gray-800">
+
+    <header class="bg-gradient-to-r from-green-700 to-green-500 text-white p-4 fixed w-full z-10 shadow-md transition-all duration-300 initial-transparent" id="navbar">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold font-display">Dapur Mama Uti</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-green-200">Home</a>
+                <a href="#about" class="hover:text-green-200">About Us</a>
+                <a href="#products" class="hover:text-green-200">Products</a>
+                <a href="#gallery" class="hover:text-green-200">Gallery</a>
+                <a href="#team" class="hover:text-green-200">Team</a>
+                <a href="#contact" class="hover:text-green-200">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="md:hidden bg-green-700 mt-4 p-4 space-y-2 hidden">
+            <a href="#home" class="block py-2 hover:bg-green-600 rounded">Home</a>
+            <a href="#about" class="block py-2 hover:bg-green-600 rounded">About Us</a>
+            <a href="#products" class="block py-2 hover:bg-green-600 rounded">Products</a>
+            <a href="#gallery" class="block py-2 hover:bg-green-600 rounded">Gallery</a>
+            <a href="#team" class="block py-2 hover:bg-green-600 rounded">Team</a>
+            <a href="#contact" class="block py-2 hover:bg-green-600 rounded">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden bg-gradient-to-r from-green-700 to-green-500">
+            <div class="absolute inset-0 opacity-50 bg-cover bg-center" style="background-image: url('img/tape-ketan-hero.jpg');"></div>
+            <div class="relative z-10 p-8">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 font-display animate-fade-in-up">Manisnya Tradisi, Segarnya Inovasi</h1>
+                <p class="text-xl md:text-2xl mb-8 font-poppins animate-fade-in-up delay-200">Tape Ketan Terbaik dari Dapur Mama Uti</p>
+                <a href="#products" class="bg-white text-green-700 hover:bg-green-100 font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300 animate-fade-in-up delay-400">Lihat Produk Kami</a>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-display">About Us</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-8 md:mb-0 animate-slide-in-left">
+                        <img src="img/about-us-tape-ketan.jpg" alt="Tentang Kami Tape Ketan" class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2 animate-slide-in-right">
+                        <h3 class="text-3xl font-semibold mb-4 text-green-700 font-display">Kisah di Balik Kenikmatan Tape Ketan Kami</h3>
+                        <p class="mb-4 text-lg leading-relaxed font-poppins">Berawal dari warisan resep turun-temurun keluarga, **Dapur Mama Uti** didirikan pada tahun 2024 dengan semangat untuk melestarikan kelezatan tape ketan tradisional, sekaligus membawanya ke era modern melalui inovasi yang menyegarkan. Kami berkomitmen menggunakan bahan baku terbaik dari petani lokal dan proses higienis untuk setiap produk.</p>
+                        <p class="text-lg leading-relaxed font-poppins">Setiap gigitan tape ketan kami, baik yang original maupun yang sudah menjadi es lilin atau puding, adalah perpaduan sempurna antara rasa otentik dan kreativitas. Kami percaya bahwa kualitas adalah kunci, dan kepuasan pelanggan adalah prioritas utama kami. Dari dapur rumahan di Semarang, kami bertekad membawa manisnya tradisi ini ke seluruh penjuru.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-display">Our Products</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden animate-fade-in-up delay-200">
+                        <img src="img/tape-ketan-original.jpg" alt="Tape Ketan Original" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-green-700 font-display">Tape Ketan Original</h3>
+                            <p class="text-gray-700 mb-4 font-poppins">Tape ketan murni dengan resep tradisional, manis alami, dan tekstur lembut yang meleleh di lidah. Cocok untuk dinikmati kapan saja.</p>
+                            <ul class="list-disc list-inside text-gray-600 font-poppins text-sm">
+                                <li>Rasa manis alami fermentasi yang khas</li>
+                                <li>Tekstur lembut dan kenyal</li>
+                                <li>Dibuat tanpa bahan pengawet</li>
+                                <li>Tersedia dalam kemasan cup kecil dan besek</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden animate-fade-in-up delay-400">
+                        <img src="img/es-lilin-tape-ketan.jpg" alt="Es Lilin Tape Ketan" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-green-700 font-display">Es Lilin Tape Ketan</h3>
+                            <p class="text-gray-700 mb-4 font-poppins">Inovasi segar dari tape ketan, es lilin yang manis dan dingin, sempurna untuk melepas dahaga di hari yang panas. Sensasi unik!</p>
+                            <ul class="list-disc list-inside text-gray-600 font-poppins text-sm">
+                                <li>Perpaduan manis dan dingin yang pas</li>
+                                <li>Camilan segar untuk segala suasana</li>
+                                <li>Variasi rasa [opsional: misal pandan, vanila]</li>
+                                <li>Dikemas praktis, siap santap</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden animate-fade-in-up delay-600">
+                        <img src="img/puding-tape-ketan.jpg" alt="Puding Tape Ketan" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-2 text-green-700 font-display">Puding Tape Ketan</h3>
+                            <p class="text-gray-700 mb-4 font-poppins">Dessert modern dengan sentuhan tradisional. Puding lembut beraroma tape ketan, ideal untuk hidangan penutup spesial.</p>
+                            <ul class="list-disc list-inside text-gray-600 font-poppins text-sm">
+                                <li>Tekstur puding creamy dan lumer</li>
+                                <li>Aroma khas tape ketan yang menggugah selera</li>
+                                <li>Elegansi rasa untuk acara spesial atau dessert harian</li>
+                                <li>Pilihan terbaik untuk pecinta manis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-300">Download Katalog Produk</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-display">Our Gallery</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <img src="img/gallery-1.jpg" alt="Tape Ketan Gallery 1" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="img/gallery-2.jpg" alt="Tape Ketan Gallery 2" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="img/gallery-3.jpg" alt="Tape Ketan Gallery 3" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="img/gallery-4.jpg" alt="Tape Ketan Gallery 4" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="img/gallery-5.jpg" alt="Tape Ketan Gallery 5" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img src="img/gallery-6.jpg" alt="Tape Ketan Gallery 6" class="w-full h-64 object-cover rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-green-800 font-display">Our Team</h2>
+                <p class="text-center text-gray-700 mb-10 max-w-2xl mx-auto font-poppins">Kami memiliki tim profesional yang berdedikasi dan penuh semangat dalam setiap aspek produksi dan pengembangan produk tape ketan kami.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center animate-fade-in-up delay-200">
+                        <img src="img/team-member-1.jpg" alt="Uti Sucipto" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-green-700 font-display">Uti Sucipto</h3>
+                        <p class="text-gray-600 font-poppins">Founder & Head Chef</p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center animate-fade-in-up delay-400">
+                        <img src="img/team-member-2.jpg" alt="Budi Santoso" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-green-700 font-display">Budi Santoso</h3>
+                        <p class="text-gray-600 font-poppins">Production Manager</p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-6 text-center animate-fade-in-up delay-600">
+                        <img src="img/team-member-3.jpg" alt="Citra Dewi" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-semibold text-green-700 font-display">Citra Dewi</h3>
+                        <p class="text-gray-600 font-poppins">Marketing & Sales</p>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-600 hover:text-green-600 transition-colors"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-green-800 text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 font-display">Contact Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="flex flex-col space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 font-display">Alamat Kami</h3>
+                            <p class="text-lg font-poppins">Jl. Ketan Manis No. 123, Kel. Tape, Kec. Ketan, Kota Semarang, Jawa Tengah, Indonesia</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 font-display">Jam Kerja</h3>
+                            <p class="text-lg font-poppins">Senin - Jumat: 08.00 - 17.00 WIB</p>
+                            <p class="text-lg font-poppins">Sabtu - Minggu: Tutup</p>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-2 font-display">Hubungi Kami</h3>
+                            <p class="text-lg font-poppins">Email: <a href="mailto:info@dapurmamauti.com" class="hover:underline">info@dapurmamauti.com</a></p>
+                            <p class="text-lg font-poppins">Telepon: <a href="tel:+6281234567890" class="hover:underline">+62 812-3456-7890</a></p>
+                            <p class="text-lg font-poppins">WhatsApp: <a href="https://wa.me/6281234567890" target="_blank" class="hover:underline">+62 812-3456-7890</a></p>
+                        </div>
+                        <div class="flex space-x-6 mt-4">
+                            <a href="#" class="text-white hover:text-green-200 transition-colors"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#" class="text-white hover:text-green-200 transition-colors"><i class="fab fa-facebook-f fa-2x"></i></a>
+                            <a href="#" class="text-white hover:text-green-200 transition-colors"><i class="fab fa-tiktok fa-2x"></i></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-4 text-center md:text-left font-display">Kirim Pesan Kepada Kami</h3>
+                        <form class="space-y-4 bg-green-700 p-8 rounded-lg shadow-lg">
+                            <div>
+                                <label for="name" class="block text-lg font-medium mb-2 font-poppins">Nama Lengkap</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Nama Anda" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-lg font-medium mb-2 font-poppins">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="email@contoh.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-lg font-medium mb-2 font-poppins">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-md bg-white text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="bg-white text-green-800 font-bold py-3 px-8 rounded-full text-lg hover:bg-green-100 transition-colors duration-300 w-full md:w-auto font-poppins">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="mt-12 rounded-lg overflow-hidden shadow-lg">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.882194300305!2d110.4042835749969!3d-7.012586692994917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b4a081a938b%3A0x6b4f73c68e1a1b1b!2sSemarang%2C%20Central%20Java!5e0!3m2!1sen!2sid!4v1719543940250!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-green-900 text-white p-6 text-center">
+        <p class="font-poppins">Copyright © 2025 Dapur Mama Uti. All Rights Reserved.</p>
+        <p class="font-poppins">Dibuat dengan <i class="fas fa-heart text-red-500"></i> di Semarang, Jawa Tengah.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
