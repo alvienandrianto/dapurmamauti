@@ -1,82 +1,271 @@
-/* css/style.css */
+/* Custom CSS for Dapur Mama Uti Website */
 
-/* Penyesuaian agar konten tidak tertutup navbar saat navigasi */
-section {
-    scroll-margin-top: 80px;
-}
-
-/* --- Definisi Palet Warna Custom --- */
-.bg-brand-primary   { background-color: #5D8736; }
-.bg-brand-secondary { background-color: #809D3C; }
-.bg-brand-light     { background-color: #F4FFC3; }
-.text-brand-primary { color: #5D8736; }
-.focus\:ring-brand-accent:focus {
-    --tw-ring-color: #A9C46C;
+/* General Body Styling */
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- Style Komponen Custom --- */
-.nav-link {
-    @apply transition-colors duration-300 hover:text-yellow-200;
-}
-.nav-link-mobile {
-    @apply transition-colors duration-300 hover:bg-brand-secondary;
-}
-.hover-scale {
-    @apply transition-transform duration-300 hover:scale-105;
-}
-.card-image {
-    @apply w-full h-full object-cover transition-transform duration-500 ease-in-out;
-}
-.card-image:hover {
-    transform: scale(1.1);
-}
-.gallery-image {
-    @apply w-full h-full object-cover transition-transform duration-300 ease-in-out;
-}
-.gallery-image:hover {
-    transform: scale(1.1);
+/* Font Definitions for Tailwind */
+.font-display {
+    font-family: 'Playfair Display', serif;
 }
 
-/* --- Animasi Navbar --- */
-#navbar.scrolled {
-    background-color: #5D8736; /* brand-primary */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
 }
 
-/* --- Animasi Hero Section --- */
-.animated-zoom {
-    animation: zoom-bg 20s infinite alternate ease-in-out;
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes zoom-bg {
-    from { transform: scale(1); }
-    to { transform: scale(1.15); }
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* --- Sistem Animasi Saat Scroll --- */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-/* State awal elemen sebelum animasi (disembunyikan) */
+@keyframes float-bob {
+    0% {
+        transform: translateX(-50%) translateY(0px);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+}
+
+/* Base styles for animated elements */
 .animate-on-scroll {
     opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Definisikan jenis-jenis gerakan animasi */
-.animate-on-scroll[data-animation="fade-in-up"] {
-    transform: translateY(40px);
-}
-.animate-on-scroll[data-animation="fade-in-left"] {
-    transform: translateX(-40px);
-}
-.animate-on-scroll[data-animation="fade-in-right"] {
-    transform: translateX(40px);
-}
-.animate-on-scroll[data-animation="zoom-in"] {
-    transform: scale(0.9);
+/* Animation classes applied by JS */
+.animate-on-scroll.fade-in-up-active {
+    animation: fadeInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-/* State akhir elemen setelah terlihat (di-trigger oleh JS) */
-.animate-on-scroll.is-visible {
+.animate-on-scroll.slide-in-left-active {
+    animation: fadeInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-on-scroll.slide-in-right-active {
+    animation: fadeInRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-float-bob {
+    animation: float-bob 4s ease-in-out infinite;
+}
+
+
+/* Navbar initial state (transparent) and scroll state */
+#navbar {
+    background-color: transparent;
+    box-shadow: none;
+    transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+#navbar.scrolled {
+    background-color: rgba(26, 75, 59, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
     opacity: 1;
-    transform: none; /* Reset transform ke posisi semula */
+}
+
+#navbar.hidden-on-scroll {
+    transform: translateY(-100%);
+    opacity: 0;
+    box-shadow: none;
+}
+
+/* Navbar links styling */
+.nav-link {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #bbf7d0;
+}
+
+.nav-link-mobile {
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-link-mobile:hover {
+    background-color: rgba(26, 75, 59, 0.8);
+}
+
+
+/* Optional: Custom style for image hovers in gallery */
+#gallery img:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure sections take up full viewport height for scroll effect */
+section {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* ===== ATURAN CSS INI TELAH DIPERBAIKI ===== */
+
+/* Override default for first section and set new background */
+#home {
+    min-height: 100vh;
+    padding-top: 0;
+
+    /* Mengatur beberapa lapisan background. Gradient di atas gambar. */
+    background: 
+        /* Lapisan Atas: Gradient radial untuk efek vignette yang lembut */
+        radial-gradient(ellipse at center, rgba(22, 101, 52, 0.2) 0%, rgba(22, 101, 52, 0.85) 90%),
+        
+        /* Lapisan Bawah: Gambar Anda dengan path yang BENAR */
+        url('../img/background.png');
+    
+    /* Properti tambahan untuk memastikan background tampil dengan benar */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ATURAN LAMA YANG BERMASALAH DIHAPUS:
+   #home > div.absolute { ... }
+   #home .absolute[style] { ... }
+*/
+
+/* Penyesuaian agar konten tidak tertutup navbar pada scroll */
+section:not(#home) {
+    scroll-margin-top: 64px;
+    padding-top: 96px;
+}
+
+/* ===== Styling untuk Tombol Back to Top ===== */
+
+#back-to-top-btn {
+    opacity: 0; /* Awalnya transparan/tersembunyi */
+    transform: translateY(100px); /* Awalnya berada di bawah layar */
+    visibility: hidden; /* Benar-benar tersembunyi */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+}
+
+#back-to-top-btn.show {
+    opacity: 1; /* Muncul penuh */
+    transform: translateY(0); /* Kembali ke posisi normal */
+    visibility: visible; /* Bisa dilihat dan diklik */
+}
+
+/* ===== Styling untuk Tombol WhatsApp dan Chat Bubble ===== */
+
+#whatsapp-btn {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+    transform: translateY(100px); /* Posisi awal di bawah layar */
+    visibility: hidden;
+}
+
+#whatsapp-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+/* Menyembunyikan bubble di perangkat mobile agar tidak mengganggu */
+@media (max-width: 768px) {
+    #whatsapp-btn .chat-bubble {
+        display: none;
+    }
+}
+
+/* ===== Styling untuk Widget Chat WhatsApp ===== */
+
+/* Penampung Tombol dan Jendela Chat */
+#wa-chat-window {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+    display: flex; /* Tambahkan ini agar flex-col berfungsi */
+}
+
+#wa-chat-window.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    visibility: visible;
+}
+
+/* Background badan chat seperti WhatsApp */
+#wa-chat-body {
+    background-color: #e5ddd5; /* Warna dasar background WA */
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png'); /* Pola doodle WA */
+}
+
+/* Gelembung pesan yang diterima */
+.message-received {
+    background-color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border-top-left-radius: 0;
+    max-width: 80%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    line-height: 1.4;
+}
+
+/* Tombol Back to Top dan Ikon WA (muncul/hilang) */
+#back-to-top-btn, #wa-icon-btn {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+#back-to-top-btn.show, #wa-icon-btn.show {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+}
+
+/* Mengubah ikon kirim dari paper-plane menjadi send */
+#wa-send-form .fa-paper-plane::before {
+    content: "\f1d8"; /* Unicode untuk ikon 'send' di Font Awesome */
+}
+
+/* Responsif: sembunyikan jendela chat di mobile, hanya tampilkan ikon */
+@media (max-width: 768px) {
+    #wa-chat-window {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        z-index: 100; /* Tampil di atas segalanya */
+    }
 }
